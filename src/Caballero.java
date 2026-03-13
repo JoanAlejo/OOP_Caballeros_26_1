@@ -12,20 +12,23 @@ public class Caballero {
     }
 
     //Constructor con parametros
+    //se agrego al constructor el atributo vida
     public Caballero(
-            String nombre, Material material, String constelacion, Dios dios
+            int id, String nombre, String constelacion, int vida
     ){
+        this.id=id;
         this.nombre=nombre;
-        this.material=material;
+        material=Material.ORO; //lo dejo definido porque todos son caballeros de oro
         this.constelacion=constelacion;
-        this.dios=dios;
+        dios=Dios.ATENEA;//lo dejo definido porque todos sirven a atenea
+        this.vida=vida;
     }
     //Sobrescritura de metodos
 
 
     @Override
     public String toString() {
-        return "Caballero{" + "id=" + id + ", nombre=" + nombre+", constelación= "+constelacion+", vida= "+this.vida+", material= "+material+", dios= "+dios + '}';
+        return "Caballero " + id + ", llamado " + nombre+" de "+constelacion+", con una vida de "+vida+" y una armadura de "+material+" que le sirve a "+dios + '}';
     }
 
     //metodo de getvida, para encapsular el atributo vida
